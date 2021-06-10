@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bff-pod
+  labels:
+    app: bff-app
+spec:
+  containers:
+  - name: bff-container
+    image: bff-image
+

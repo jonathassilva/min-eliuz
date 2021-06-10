@@ -1,0 +1,8 @@
+apiVersion: skaffold/v2beta15
+kind: Config
+metadata:
+  name: bff-config
+build:
+  artifacts:
+  - image: bff-image
+
