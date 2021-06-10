@@ -1,0 +1,15 @@
+apiVersion: skaffold/v2beta15
+kind: Config
+metadata:
+  name: client-config
+build:
+  artifacts:
+    - image: client-image
+      sync:
+        manual:
+          - src: "pages/*"
+            dest: .
+portForward:
+  - resourceType: Pod
+    resourceName: client-pod
+    port: 3000
